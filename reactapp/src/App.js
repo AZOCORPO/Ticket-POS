@@ -1,20 +1,16 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
 
-import {provider, Provider} from 'react-redux'
-import {createStore, combineReducers} from 'redux'
+import { provider, Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
 
-import wishList from './reducers/articles'
-import token from './reducers/token'
-import selectedLang from './reducers/selectedLang'
+import setting from './reducers/setting'
 
 import ScreenHome from './ScreenHome';
-import ScreenArticlesBySource from './ScreenArticlesBySource'
-import ScreenMyArticles from './ScreenMyArticles'
-import ScreenSource from './ScreenSource'
+import Tools from './Tools'
 
-const store = createStore(combineReducers({wishList, token, selectedLang}))
+const store = createStore(combineReducers({ setting }))
 
 function App() {
   return (
@@ -23,13 +19,12 @@ function App() {
       <Router>
         <Switch>
           <Route component={ScreenHome} path="/" exact />
-          <Route component={ScreenSource} path="/screensource" exact />
-          <Route component={ScreenArticlesBySource} path="/screenarticlesbysource/:id" exact />
-          <Route component={ScreenMyArticles} path="/screenmyarticles" exact />
+          <Route component={Tools} path="/tools" exact />
+
         </Switch>
       </Router>
     </Provider>
-    
+
 
   );
 }

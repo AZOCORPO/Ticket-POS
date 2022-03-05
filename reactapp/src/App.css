@@ -107,3 +107,24 @@ th.price {
 }
 
 
+.printme3 {
+  display: none;
+  font-size: 24px;
+  width: 400px!important; 
+  max-width: 400px!important;
+  font-family: 'Times New Roman'!important; 
+  color: black!important;
+  font-weight: bold!important;
+  margin-left: 5px;
+}
+
+@media  print {
+
+.printme3  {
+  display: flex!important;
+  flex-direction: column!important;
+  align-items: center!important;
+  justify-content: center!important;
+  align-items: center!important;
+}
+}

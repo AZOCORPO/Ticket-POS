@@ -4,8 +4,8 @@ import { Input, Button } from 'antd';
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import Nav from './Nav'
-/* import Aimprimercommande from '../Component/Aimprimercommande';
- */
+import Aimprimercommande from './Commandetoprint';
+
 function ScreenHome(props) {
 
   const [signUpUsername, setSignUpUsername] = useState('')
@@ -75,7 +75,11 @@ function ScreenHome(props) {
             If a solution using a Bluetooth communication with the printer is possible, or even wired, allowing me to trigger directly by communicating with the printer, I will be fine.
             <br /> -Either by managing not to have a print dialog box. This solution should not be accompanied by too complicated handling.
           </p>
-          {/* <Aimprimercommande /> */}
+          <strong>Pour faire simple actuellement, j'utilise cette solution ci dessous. (mais comme on peut le voir, une boite de dialogue s'affiche). Aussi,
+            un useffect devrait etre en mesure de déclecher l'impression sans boite de dialogue (je doute que cela soit un solution car même si cela était possible , comment 
+            l'utilisateur ferait pour pouvoir sélectionner son imprimante thermique et pas une autre...?)
+          </strong>
+          <Aimprimercommande />
         </div>
         <div className="Sign" style={{ maxWidth: '30%', textAlign: 'center' }}>
           Non-exhaustive list of printer:

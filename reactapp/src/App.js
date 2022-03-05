@@ -7,8 +7,8 @@ import { createStore, combineReducers } from 'redux'
 
 import setting from './reducers/setting'
 
-import ScreenHome from '../src/Component/ScreenHome';
-import Tools from '../src/Component/Tools'
+import ScreenHome from './ScreenHome'; 
+import Tools from './Tools'
 
 const store = createStore(combineReducers({ setting }))
 

@@ -7,8 +7,8 @@ import { createStore, combineReducers } from 'redux'
 
 import setting from './reducers/setting'
 
-import ScreenHome from './ScreenHome';
-import Tools from './Tools'
+import ScreenHome from '../src/Component/ScreenHome';
+import Tools from '../src/Component/Tools'
 
 const store = createStore(combineReducers({ setting }))
 
@@ -20,7 +20,6 @@ function App() {
         <Switch>
           <Route component={ScreenHome} path="/" exact />
           <Route component={Tools} path="/tools" exact />
-
         </Switch>
       </Router>
     </Provider>

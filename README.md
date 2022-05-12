@@ -1,6 +1,6 @@
 Pour pouvoir lancer le projet:
 1/ Git clone le projet 
-2/ Installez les dépendences (Back+front)
+2/ Installez les dépendances (Back+front)
 --> 'npm i' à la racine du dossier 
 --> 'npm i' dans reactapp
 3/ Lancez le serveur : 

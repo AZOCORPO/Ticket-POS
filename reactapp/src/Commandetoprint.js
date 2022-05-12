@@ -66,12 +66,11 @@ function Aimprimercommande(props) {
     );
 
     return (
-        <div>
+        <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}  >
             <ComponentToPrint ref={componentRef} />
-            <FontAwesomeIcon onClick={handlePrint} className='m-0 p-0' icon={faPrint} style={{ cursor: "pointer", fontSize: 25 }} />
+            <FontAwesomeIcon onClick={handlePrint} className='m-3' icon={faPrint} style={{ cursor: "pointer", fontSize: 25 }} /> "Solution actuelle"
         </div>
     );
 }
-
 
 export default Aimprimercommande

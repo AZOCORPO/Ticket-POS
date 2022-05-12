@@ -69,15 +69,14 @@ function ScreenHome(props) {
             </p>
           </div>
           <Button onClick={() => LaunchPrint()} style={{ width: '80px' }} type="primary">Print Me</Button>
-          <p className='text-center'>
-            Printing must be started:
-            <br />-either through the back-end using the route. Connecting to a cloud printer (Star or Epson) connected to Wifi can be an excellent solution.
-            If a solution using a Bluetooth communication with the printer is possible, or even wired, allowing me to trigger directly by communicating with the printer, I will be fine.
-            <br /> -Either by managing not to have a print dialog box. This solution should not be accompanied by too complicated handling.
-          </p>
-          <strong>Pour faire simple actuellement, j'utilise cette solution ci dessous. (mais comme on peut le voir, une boite de dialogue s'affiche). Aussi,
-            un useffect devrait etre en mesure de déclecher l'impression sans boite de dialogue (je doute que cela soit un solution car même si cela était possible , comment 
-            l'utilisateur ferait pour pouvoir sélectionner son imprimante thermique et pas une autre...?)
+          <strong>
+            Pour faire simple actuellement, j'utilise cette solution ci-dessous. (mais comme on peut le voir, une boite de dialogue s'affiche). Dans la réalité,
+            un useffect devrait etre en mesure de déclecher une route qui gérerait depuis mon Back l'impression sans boite de dialogue.
+            On aurait bien entendu defini en amont l'imprimante par défaut depuis les réglages, et si l'impression automatique doit être lancée, mais c'est du détail.
+            Un package '@thiagoelg/node-printer' semble être une piste très interessante... Malheureusement je n'ai pas pu surmonter certaines difficultés à savoir la mise en forme du ticket et 
+            le déclemechement de la fonctionnalité de coupe de l'imprimante. 
+            Enfin, en dernier recours, une solution via une API et des imprimantes connectées pourrait être envisagée. 
+            En dernière remarque et piste d'exploration google cloud print aurait pu faire le taff (service qui n'existe plus)
           </strong>
           <Aimprimercommande />
         </div>
@@ -119,7 +118,7 @@ function ScreenHome(props) {
           TM-P80 (modèle Wi-Fi®)
           <br />
           <span style={{ fontWeight: 'bold' }}>
-            Xprinter in 58mm or Xprinter XP-N160II or an other of this brand could be perfect
+            Xprinter in 58mm/&/80 mm or Xprinter XP-N160II is perfect
             </span>
           <br />
           <a href='https://c4b.epson-biz.com/modules/pos/index.php?page=single_soft&cid=6762&scat=57&pcat=52' target='blank'>https://c4b.epson-biz.com/...</a>
